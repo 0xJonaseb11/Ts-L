@@ -18,7 +18,7 @@ This will create a .js file
 To initializa a new typescript project,
 
 ```sh
-tsc init
+tsc --init
 ```
 
 This create a project structure with a tsconfig.json file indicating success.
