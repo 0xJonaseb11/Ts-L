@@ -55,5 +55,17 @@ type PositiveOddNumbersUnderTen = 1 | 2 | 3 | 5 | 7 | 9;
 
 
 function getLength(obj: string | string[]) {
-    
+    return obj.length;
 }
+
+function wrapInArray(obj: string | string[]) {
+    if (typeof obj === "string") {
+        return [obj];
+    }
+    return obj;
+}
+
+/**
+ * GENERICS
+ * 
+ */
