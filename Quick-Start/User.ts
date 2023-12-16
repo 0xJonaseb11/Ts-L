@@ -33,11 +33,12 @@ const user: User = new UserAccount("Murphy", 1);
 
  // delete the user
  function deleteUser(User: User) {
-    // ...
+
+    return User;
  }
   // get adminUser
  function getAdminUser(): User {
-    // ...
+    return user;
  }
 
  // 2. COMPOSING TYPES
@@ -83,12 +84,13 @@ interface BackPack<Type> {
     get: () => Type;
 }
 
-// Full form oddf the AnimationPlaybackEvent
-declare const backpack: BackPack<string>;
-const object = backpack.get();
-backpack.add("name");
+/* Full form oddf the AnimationPlaybackEvent
+*declare const backpack: BackPack<string>;
+*const object = backpack.get();
+*backpack.add("name");
+*/
 
-/**
+/*
  * STRUCTURAL TYPE SYSTEM
  *Type checking focuses on the shape that the values have
  *sometimes called "duck typing" | "structural typing"
