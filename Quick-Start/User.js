@@ -48,3 +48,4 @@ var rect = { x: 33, y: 3, width: 30, height: 80 };
 logPoint(rect); // logs "33, 3"
 var color = { hex: "#187ABF" };
 logPoint(point3);
+logPoint(color);
