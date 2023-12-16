@@ -1,3 +1,5 @@
+// 1. DEFINING TYPES
+
 // const user = {
 //     name: "Hayes",
 //     id: 0,
@@ -34,6 +36,24 @@ const user: User = new UserAccount("Murphy", 1);
     // ...
  }
   // get adminUser
- function getAdminUser() {
+ function getAdminUser(): User {
     // ...
  }
+
+ // 2. COMPOSING TYPES
+/* With TypeScript, you can create complex types by combining simple ones.
+* Unions
+*Unions provide a way to handle different types too. For example, you may have a function that takes an array or a string:
+*A popular use-case for union types is to describe the set of string or number literals that a value is allowed to be
+
+*/
+
+type MyBool  = true | false;
+type WindowStates = "open" | "closed" | "minimised";
+type LockStates = "locked" | "unlocked";
+type PositiveOddNumbersUnderTen = 1 | 2 | 3 | 5 | 7 | 9;
+
+
+function getLength(obj: string | string[]) {
+    
+}
