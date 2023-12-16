@@ -67,5 +67,23 @@ function wrapInArray(obj: string | string[]) {
 
 /**
  * GENERICS
- * 
+ * They provide variables to types
+ * Forexample, is an array. without generics, an array can
+ * contain anything BUT with generics , it can only describe the values of an array
  */
+
+type StringArray = Array<string>;
+type NumberArray = Array<number>;
+type ObjectWithNameArray = Array<{ name: string}>;
+
+// u can declare your own types that use generics
+// shortcut
+interface BackPack<Type> {
+    add: (obj: Type) => void;
+    get: () => Type;
+}
+
+// Full form oddf the AnimationPlaybackEvent
+declare const backpack: BackPack<string>;
+const object = backpack.get();
+backpack.add("name");
