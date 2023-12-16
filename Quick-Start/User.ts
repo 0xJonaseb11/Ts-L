@@ -110,7 +110,7 @@ interface BackPack<Type> {
 const point = { x: 12, y: 26};
 logPoint(point);
 
-/**
+/*
  * The point variable is never declared
  *  to be a Point type. However, TypeScript
  *  compares the shape of point to the shape
@@ -119,4 +119,14 @@ logPoint(point);
  * 
  * The shape-matching only requires a subset of the object’s fields to match.
  * 
- * */
+ */
+
+const point3 = { x: 12, y: 26, z: 89 };
+logPoint(point3); // logs "12, 26"
+
+const rect = { x: 33, y: 3, width: 30, height: 80 };
+logPoint(rect); // logs "33, 3"
+
+const color = { hex: "#187ABF" };
+logPoint(point3);
+
